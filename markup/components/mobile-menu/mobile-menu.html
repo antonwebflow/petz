@@ -1,0 +1,36 @@
+
+
+
+
+<div class="mobile-menu">
+<!--
+    <p><a href="#" id="trigger" class="menu-trigger">M</a></p>
+-->
+
+
+
+        <header class="mobile-menu__bar">
+            <button id="trigger" class="toggle-button">
+                {{Icon iconName='menu' className='mobile-menu__icon' }}
+            </button>
+            <div class="mobile-menu__logo__wrap">
+                {{Icon iconName='logo' className='mobile-menu__logo'}}
+            </div>
+
+            <div class="mobile-menu__right">
+                    <div class="mobile-menu__search">
+                        <form action="/catalog/">
+                                <input type="search" name="q" id="title-search-input" maxlength="50" autocomplete="off" placeholder="" value="">
+                        </form>
+
+                    </div>
+                    <div class="mobile-menu__basket">
+                        {{Icon iconName='basket' className='mobile-menu__basket__icon'}}
+                        <div class="mobile-menu__basket__num"><span>19</span></div>
+                    </div>
+            </div>
+
+
+        </header>
+
+</div>

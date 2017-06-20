@@ -1,0 +1,52 @@
+// Common styles of the project
+
+html, body {
+    height: 100%;
+    width: 100%;
+    font-family: 'Open Sans', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+}
+
+.page {
+
+}
+
+.page__wrapper {
+    min-height: 100%;
+    margin-bottom: -50px;
+}
+
+* html .page__wrapper {
+    height: 100%;
+}
+
+.page__buffer {
+    height: 0;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: $container-width;
+    @include mappy-query(tablet) {
+        max-width: none;
+    }
+    @include mappy-query(phone) {
+        padding: 0 .99em;
+    }
+
+}
+
+.separator {
+
+    @include mappy-query(phone) {
+        display: none;
+    }
+
+    margin-top: 60px;
+    margin-bottom: 40px;
+   border-top: 1px solid #eeeeee;
+}

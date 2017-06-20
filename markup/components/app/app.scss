@@ -1,0 +1,141 @@
+.download {
+    @include mappy-query(phone) {
+        margin-top: .5em;
+    }
+}
+
+.app {
+    background-color: #fbfbfb;
+    padding: 1em;
+    position: relative;
+    min-height: 280px;
+    display: flex;
+
+    @include mappy-query(phone)
+    {
+        display: none;
+    };
+
+
+    &__buttons {
+        margin-top: 2em;
+
+    }
+
+    &__icon {
+        margin: auto;
+        &__wrap {
+            display: flex;
+            background-color: #FFFFFF;
+            border: solid 1px #eeeeee;
+            border-radius: 15px;
+            align-self: flex-start;
+            align-content: center;
+            margin-right: 1em;
+            width: 50px;
+            height: 50px;
+            box-sizing: border-box;
+        }
+
+    }
+
+
+
+    &__phone {
+        position: absolute;
+        top: -2.5em;
+        right: 3em;
+
+    }
+
+    &__wrap {
+        margin-top: 3em;
+    }
+}
+
+.subscribe {
+    background-color: #fbfbfb;
+    padding: 1.2em;
+    min-height: 280px;
+    @include mappy-query(phone) {
+        min-height: 0;
+    }
+
+
+    &__submit {
+        background-color: $color__blue;
+        color: #FFFFFF;
+        padding: 0.6em;
+        border: none;
+        border-radius: 3px;
+
+
+    }
+
+    &__field {
+        padding-left: .6em;
+        border-radius: 3px;
+        border-color: #f4f4f4;
+        border-style: solid;
+        border: 1px;
+
+
+    }
+
+    &__print {
+        fill: $color__blue;
+    }
+
+    &__dd {
+        @include typi('body');
+        margin-top: 1em;
+
+        &__row {
+            display: flex;
+            font-size: 1.1em;
+            margin-top: 1em;
+            align-items: stretch;
+            align-content: flex-start;
+            box-sizing: border-box;
+
+            input {
+                @include typi('body');
+
+            }
+
+        }
+
+
+
+        &__select {
+            @include typi('body');
+            border: none;
+            background: transparent url('%=static=%assets/carousel/dropdown.svg') no-repeat 90%;
+            overflow: hidden;
+            margin-left: 0.5em;
+            border-bottom: 1px dashed $color__link;
+            padding: 2px 22px 2px 2px;
+        }
+    }
+
+    &__heading {
+        @include typi('subscribe__heading');
+        margin: 0;
+        font-family: CirceRoundedAltBold;
+        font-weight: normal;
+    }
+
+    &__text {
+        @include typi('body');
+
+        &_blue {
+            color: $color__blue;
+            font-weight: bold;
+
+            &:after {
+
+            }
+
+        }
+    }
+}

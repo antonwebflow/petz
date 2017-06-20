@@ -1,0 +1,82 @@
+
+.news {
+
+    @include mappy-query(phone) {
+        display: none;
+    }
+
+    &__heading {
+
+    }
+
+    &__link {
+        @extend .carousel__r-link;
+        justify-content: flex-start;
+    }
+
+    &__item {
+        margin-bottom: 1em;
+        &__heading {
+            font-size: .8em;
+        }
+
+        &__view {
+
+            font-size: 0.6em;
+
+            &__icon {
+                width: 10px;
+                height: 10px;
+                margin-right: 4px;
+            }
+        }
+
+        &__text {
+            font-size: .8em;
+        }
+
+    }
+
+
+
+    &__img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    ul {
+        margin: 0 0 2em 0;
+        padding: 0;
+        display: flex;
+
+        li {
+            display: block;
+            margin-right: 1.3em;
+
+            a {
+                font-family: CirceRoundedAltBold;
+                font-weight: normal;
+                font-size: 1.4em;
+                color: $color__link;
+                line-height: 2.1em;
+
+
+                &:hover {
+                    color: $color__blue;
+                    border-bottom: 4px solid $color__link_hover;
+                }
+            }
+
+        }
+
+        .ui-tabs-active {
+            background: #fff;
+            border-bottom: none;
+            a {
+                color: $color__blue;
+                border-bottom: 4px solid $color__link_hover;
+            }
+        }
+    }
+}
+

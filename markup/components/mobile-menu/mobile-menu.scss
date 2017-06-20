@@ -1,0 +1,214 @@
+// Mobile menu
+
+.toggle-button {
+    background-color: #FFFFFF;
+    border: none;
+    color: $color__blue;
+    padding-left: 0.5em;
+
+    &:focus {
+        outline: none;
+    }
+
+}
+
+ /*
+ end
+ */
+
+.mobile-menu {
+
+    &__arrow_l {
+        width: 1.6em;
+        height: 1.6em;
+
+    }
+
+    &__right {
+
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-self: center;
+        justify-content: space-between;
+        //flex: 0 1 auto;
+    }
+
+    &__search {
+        position: absolute;
+        top: -8px;
+        right: 2.5em;
+
+        input[type=search] {
+            transition: all .5s;
+            outline: none;
+            @include typi('header__search');
+            background: url('%=static=%assets/header/search.svg') no-repeat right 0.5em center;
+            background-size: 24px;
+            //padding: 6px 2.5em 6px 10px;
+            width: 20px;
+            height: 60px;
+            padding-left: 10px;
+            color: transparent;
+            cursor: pointer;
+            border: none;
+
+            &:focus {
+                    width: 170px;
+                    padding-left: 16px;
+                    color: #000;
+                    background-color: #fff;
+                    cursor: auto;
+                    border-bottom: solid 1px $color__green;
+
+            }
+
+        }
+
+    }
+
+
+
+    &__basket {
+        @extend .header__right__basket;
+        width: auto;
+
+        &__num {
+            @extend .header__right__basket__num;
+            top: -2px;
+
+        }
+
+
+        &__icon {
+            @extend .header__right__basket__icon;
+            max-width: 28px;
+        }
+    }
+
+    &__bar {
+        min-height: 5em;
+        display: flex;
+        align-content: center;
+        justify-content: space-around;
+    }
+
+    &__icon {
+        width: 39px;
+        height: 39px;
+    }
+
+    display: none;
+
+    @include mappy-query(phone) {
+
+        display: block;
+
+
+    };
+
+
+    &__logo {
+
+        &__wrap {
+            //flex: 0 1 auto;
+            align-self: center;
+            margin-right: 2em;
+        }
+
+        max-width: 9em;
+        max-height: 3.7em;
+
+    }
+
+
+}
+
+
+//Slideout
+
+.slideout-menu {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 256px;
+    min-height: 100vh;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    z-index: 0;
+    background-color: #FFFFFF;
+    display: none;
+}
+
+.slideout-menu-left {
+    left: 0;
+}
+
+.slideout-menu-right {
+    right: 0;
+}
+
+.slideout-panel {
+    position: relative;
+    z-index: 1;
+    will-change: transform;
+    background-color: #FFF; /* A background-color is required */
+    min-height: 100vh;
+}
+
+.slideout-open,
+.slideout-open body,
+.slideout-open .slideout-panel {
+    overflow: hidden;
+}
+
+.slideout-open .slideout-menu {
+    display: block;
+}
+
+// Levels
+.slideStyle .menu-pulldown {/*animate the left-to-right sliding*/
+    -webkit-transition: transform .3s ease;
+    -moz-transition: transform .3s ease;
+    transition: transform .3s ease;
+}/*
+.slideStyle .backLink {
+	display: none;
+}*/
+.slideStyle .backLink {
+    display: block;/*hide by default, show IF menu has "slideStyle" class*/
+    background: none;
+    border: 0;
+    width: 100%;
+    height: 3rem;
+    box-sizing: border-box;
+    border-bottom: 1px solid #999;
+    text-align: left;
+    position: absolute;
+    top: 0;
+    left: 100%;/*show .backLink to the right by a factor of 100% of the width of its parent*/
+    color: inherit;
+}
+.slideStyle .backLink:hover, .menuLevels .backLink:focus {
+    background-color: #fff;
+    color: #000;
+}
+.slideStyle ul {/*top-level ul.*/
+    position: relative;/*Each ul should be the reference point for child uls - child levels, that is*/
+    width: 100%;/*each ul should be 100% width of its parent - essentially, all the same width. 256px, for ex.*/
+}
+.slideStyle ul ul {/*may or may not be display:none; each ul should show to the right of its parent ul*/
+    background: none;
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+    top: 3rem;/*leave room for "< Main Menu" link at top. Note that */
+    left: 100%;/*show submenu to the right by a factor of 100% of the width of its parent*/
+}
+.slideStyle li li {
+    position: static;/*don't orient top of menu ul to top of menu li, orient them to top of parent menu ul*/
+}
+.slideStyle li li a {
+    width: auto;
+}

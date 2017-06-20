@@ -1,0 +1,199 @@
+//colors
+$color_gray_nurse_approx: #e9e9e9;
+$white: #fff;
+$color_mine_shaft_approx: #333;
+$color_alabaster_approx: #fbfbfb;
+$color_gallery_approx: #f0f0f0;
+$color_tapa_approx: #777;
+$color_celeste_approx: #ccc;
+
+//fonts
+$font_0: Ionicons;
+
+.menu-container {
+    width: 80%;
+    margin: 0 auto;
+    background: $color_gray_nurse_approx;
+}
+.menu-mobile {
+    display: none;
+    padding: 20px;
+    &:after {
+        content: "\f394";
+        font-family: $font_0;
+        font-size: 2.5rem;
+        padding: 0;
+        float: right;
+        position: relative;
+        top: 50%;
+        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+        transform: translateY(-25%);
+    }
+}
+@media only screen and(max-width: 959px) {
+    .menu-container {
+        width: 100%;
+    }
+    .menu-mobile {
+        display: block;
+    }
+    .menu {
+        > ul {
+            display: none;
+            > li {
+                width: 100%;
+                float: none;
+                display: block;
+                a {
+                    padding: 1.5em;
+                    width: 100%;
+                    display: block;
+                }
+                > ul {
+                    position: relative;
+                    &.normal-sub {
+                        width: 100%;
+                    }
+                    > li {
+                        float: none;
+                        width: 100%;
+                        margin-top: 20px;
+                        &:first-child {
+                            margin: 0;
+                        }
+                        > ul {
+                            position: relative;
+                            > li {
+                                float: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .show-on-mobile {
+            display: block;
+        }
+    }
+    .menu-dropdown-icon:before {
+        display: block;
+    }
+}
+.menu-dropdown-icon:before {
+    content: "\f489";
+    font-family: $font_0;
+    display: none;
+    cursor: pointer;
+    float: right;
+    padding: 1.5em 2em;
+    background: $white;
+    color: $color_mine_shaft_approx;
+}
+.menu > ul {
+    margin: 0 auto;
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    position: relative;
+    //Instead of the line below you could use @include box-sizing($bs)
+    box-sizing: border-box;
+    &:before {
+        content: "";
+        display: table;
+    }
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    > li {
+        float: left;
+        background: $color_alabaster_approx;
+        padding: 0;
+        margin: 0;
+        a {
+            text-decoration: none;
+            padding: 1.5em 3em;
+            display: block;
+        }
+        &:hover {
+            background: $color_gallery_approx;
+        }
+        > ul {
+            display: none;
+            width: 100%;
+            background: $color_gallery_approx;
+            padding: 20px;
+            position: absolute;
+            z-index: 99;
+            left: 0;
+            margin: 0;
+            list-style: none;
+            //Instead of the line below you could use @include box-sizing($bs)
+            box-sizing: border-box;
+            &:before {
+                content: "";
+                display: table;
+            }
+            &:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+            > li {
+                margin: 0;
+                padding-bottom: 0;
+                list-style: none;
+                width: 25%;
+                background: none;
+                float: left;
+                a {
+                    color: $color_tapa_approx;
+                    padding: .2em 0;
+                    width: 95%;
+                    display: block;
+                    border-bottom: 1px solid $color_celeste_approx;
+                }
+                > ul {
+                    display: block;
+                    padding: 0;
+                    margin: 10px 0 0;
+                    list-style: none;
+                    //Instead of the line below you could use @include box-sizing($bs)
+                    box-sizing: border-box;
+                    &:before {
+                        content: "";
+                        display: table;
+                    }
+                    &:after {
+                        content: "";
+                        display: table;
+                        clear: both;
+                    }
+                    > li {
+                        float: left;
+                        width: 100%;
+                        padding: 10px 0;
+                        margin: 0;
+                        font-size: .8em;
+                        a {
+                            border: 0;
+                        }
+                    }
+                }
+            }
+            &.normal-sub {
+                width: 300px;
+                left: auto;
+                padding: 10px 20px;
+                > li {
+                    width: 100%;
+                    a {
+                        border: 0;
+                        padding: 1em 0;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,19 @@
+.brands {
+
+    margin-bottom: 5em;
+    @include mappy-query(phone)
+    {
+        display: none;
+    };
+
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
+
+    &__item {
+        max-width: 155px;
+        max-height: 70px;
+        align-self: center;
+    }
+}

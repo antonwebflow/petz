@@ -1,0 +1,264 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+
+    <head>
+        {{> head/head }}
+    </head>
+
+    <body class="page">
+        %=symbols=%
+
+        <!-- Mobile menu -->
+        <div class="mp-container">
+            <!-- Push Wrapper -->
+            <div class="mp-pusher" id="mp-pusher">
+
+                <!-- mp-menu -->
+                <nav id="mp-menu" class="mp-menu">
+                    <div class="mp-level">
+                        <ul>
+                            <li class="icon">
+                                <a class="icon" href="#">{{Icon iconName='arrow_left' className='mobile-menu__arrow_l'}} Аквариумы</a>
+                                <div class="mp-level">
+                                    <h2 class="icon">Аквариумы</h2>
+                                    <a class="mp-back" href="#">Назад{{Icon iconName='arrow_right' className='mobile-menu__arrow_l'}}</a>
+                                    <ul>
+                                        <li><a href="#">Категория</a></li>
+                                        <li><a href="#">Категория</a></li>
+                                        <li><a href="#">Категория</a></li>
+
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="icon">
+                                <a class="icon" href="#">{{Icon iconName='arrow_left' className='mobile-menu__arrow_l'}} Террариумы</a>
+                                <div class="mp-level">
+                                    <h2 class="icon">Террариумы</h2>
+                                    <a class="mp-back" href="#">Назад{{Icon iconName='arrow_right' className='mobile-menu__arrow_l'}}</a>
+                                    <ul>
+                                        <li><a href="#">Категория</a></li>
+                                        <li><a href="#">Категория</a></li>
+                                        <li><a href="#">Категория</a></li>
+
+                                    </ul>
+                                </div>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                </nav>
+                <!-- /mp-menu -->
+
+                <div class="scroller"><!-- this is for emulating position fixed of the nav -->
+                    <div class="scroller-inner">
+        <!-- Mobile menu -->
+
+        <section class="page__wrapper">
+
+            {{> mobile-menu/mobile-menu }}
+
+            <header>
+            {{> nav-fixed/nav-fixed }}
+            {{> header/header }}
+             </header>
+
+        {{> slider/slider }}
+        {{> carousel/carousel }}
+            <div class="container">
+                <hr class="separator">
+            </div>
+
+            {{> brands/brands }}
+            {{> app/app }}
+            {{> hits/hits }}
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12
+                                col-md-5
+                                col-lg-5">
+                        {{> news/news }}
+                    </div>
+
+                    <div class="col-xs-12
+                                col-md-6 col-md-offset-1
+                                col-lg-6 col-lg-offset-1">
+                        {{> content/content }}
+                    </div>
+                 </div>
+            </div>
+
+            {{> popup/popup }}
+
+
+            <div class="page__buffer"></div>
+
+        </section>
+
+        <footer class="page__footer">
+            {{> footer/footer}}
+        </footer>
+
+                    </div><!-- /scroller-inner -->
+                </div><!-- /scroller -->
+
+            </div><!-- /pusher -->
+        </div><!-- /container -->
+
+
+        <script src="%=static=%js/separate-js/svg4everybody.min.js"></script>
+        <script>svg4everybody();</script>
+
+        <!-- Main scripts. You can replace it, but I recommend you to leave it here     -->
+        <script src="%=static=%js/main%=hash=%%=min=%.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script
+            src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+            integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+            crossorigin="anonymous"></script>
+        <script src="%=static=%js/separate-js/swiper.jquery.min.js"></script>
+        <script src="%=static=%js/separate-js/megamenu.js" type="text/javascript"></script>
+        <script>
+            $( function() {
+                $( ".news" ).tabs();
+            } );
+            $(document).ready(function () {
+
+                // Popups
+                $(function() {
+                    //----- OPEN
+                    $('[data-popup-open]').on('click', function(e)  {
+                        var targeted_popup_class = jQuery(this).attr('data-popup-open');
+                        $('[data-popup="' + targeted_popup_class + '"]').fadeIn(350);
+
+                        e.preventDefault();
+                    });
+
+                    //----- CLOSE
+                    $('[data-popup-close]').on('click', function(e)  {
+                        var targeted_popup_class = jQuery(this).attr('data-popup-close');
+                        $('[data-popup="' + targeted_popup_class + '"]').fadeOut(350);
+
+                        e.preventDefault();
+                    });
+                });
+
+                //Sliders
+                var carousel = new Swiper ('.sw-main', {
+                    // Optional parameters
+                    paginationClickable: true,
+                    nextButton: '.carousel__next_main',
+                    prevButton: '.carousel__prev_main',
+                    slidesPerView: 1,
+                    spaceBetween: 0,
+                    breakpoints: {
+                        1024: {
+                            slidesPerView: 1,
+                            spaceBetween: 0
+                        },
+                        768: {
+                            slidesPerView: 1,
+                            spaceBetween: 0
+                        },
+                        640: {
+                            slidesPerView: 1,
+                            spaceBetween: 0
+                        },
+                        320: {
+                            slidesPerView: 1,
+                            spaceBetween: 0
+                        }
+                    }
+                });
+                var carousel = new Swiper ('.sw-a', {
+                    // Optional parameters
+                    paginationClickable: true,
+                    nextButton: '.carousel__next',
+                    prevButton: '.carousel__prev',
+                    slidesPerView: 5,
+                    spaceBetween: 16,
+                    breakpoints: {
+                        1024: {
+                            slidesPerView: 5,
+                            spaceBetween: 16
+                        },
+                        768: {
+                            slidesPerView: 3,
+                            spaceBetween: 12
+                        },
+                        640: {
+                            slidesPerView: 1,
+                            spaceBetween: 0
+                        },
+                        320: {
+                            slidesPerView: 1,
+                            spaceBetween: 0
+                        }
+                    }
+                });
+                var carouselHits = new Swiper ('.sw-h', {
+                    // Optional parameters
+                    paginationClickable: true,
+                    nextButton: '.carousel__next_h',
+                    prevButton: '.carousel__prev_h',
+                    slidesPerView: 3,
+                    slidesPerColumn: 2,
+                    spaceBetween: 16,
+                    breakpoints: {
+                        1024: {
+                            slidesPerView: 3,
+                            slidesPerColumn: 2,
+                            spaceBetween: 16
+                        },
+                        768: {
+                            slidesPerView: 3,
+                            spaceBetween: 12
+                        },
+                        640: {
+                            slidesPerView: 2,
+                            spaceBetween: 10
+                        },
+                        320: {
+                            slidesPerView: 1,
+                            spaceBetween: 10
+                        }
+                    }
+                });
+                var carouselTest = new Swiper ('.sw-test', {
+                    // Optional parameters
+                    slidesPerView: 3,
+                    slidesPerColumn: 3,
+                    spaceBetween: 16,
+                    breakpoints: {
+                        1024: {
+                            slidesPerView: 3,
+                            slidesPerColumn: 2,
+                            spaceBetween: 16
+                        },
+                        768: {
+                            slidesPerView: 3,
+                            spaceBetween: 12
+                        },
+                        640: {
+                            slidesPerView: 2,
+                            spaceBetween: 10
+                        },
+                        320: {
+                            slidesPerView: 1,
+                            spaceBetween: 10
+                        }
+                    }
+                })
+            });
+        </script>
+        <script src="%=static=%js/separate-js/classie.js"></script>
+        <script src="%=static=%js/separate-js/mlpushmenu.js"></script>
+        <script>
+            new mlPushMenu( document.getElementById( 'mp-menu' ), document.getElementById( 'trigger' ), {
+                type : 'cover'
+            } );
+        </script>
+    </body>
+
+</html>

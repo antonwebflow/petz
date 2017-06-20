@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'CirceRoundedAltBold';
+    src: url('fonts/CirceRoundedAltBold.eot');
+    src: url('fonts/CirceRoundedAltBold.eot') format('embedded-opentype'),
+         url('fonts/CirceRoundedAltBold.woff2') format('woff2'),
+         url('fonts/CirceRoundedAltBold.woff') format('woff'),
+         url('fonts/CirceRoundedAltBold.ttf') format('truetype'),
+         url('fonts/CirceRoundedAltBold.svg#CirceRoundedAltBold') format('svg');
+}

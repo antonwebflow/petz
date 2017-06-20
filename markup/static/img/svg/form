@@ -1,0 +1,50 @@
+<!-- <link href="https://s3.amazonaws.com/agilecrm/forms/v1/agile-form-min.css" rel="stylesheet"> -->
+<form class="form-view theme2" id="agile-form" action="https://oneup.agilecrm.com/formsubmit" style="
+background-color: transparent;
+box-shadow: 0 0 0 0;
+max-width: 940px;
+padding: 0;"
+      method="GET">
+    <fieldset>
+
+        <!-- Form Name -->
+        <legend class="agile-hide-formname" ></legend>
+        <p class="agile-form-description" style="display: none"></p>
+        <div style="display: none; height: 0px; width: 0px;">
+            <input type="hidden" id="_agile_form_name" name="_agile_form_name" value="Download the white paper !">
+            <input type="hidden" id="_agile_domain" name="_agile_domain" value="oneup">
+            <input type="hidden" id="_agile_api" name="_agile_api" value="nu2v6c7mrh7ued5bagd2ft15dn">
+            <input type="hidden" id="_agile_redirect_url" name="_agile_redirect_url" value="http://oneup.com/thanks">
+            <input type="hidden" id="_agile_document_url" name="_agile_document_url" value="">
+
+            <input type="hidden" id="_agile_confirmation_msg" name="_agile_confirmation_msg" value="Merci ! Votre ebook va être téléchargé dans quelques secondes.">
+            <input type="hidden" id="_agile_form_id_tags" name="tags" value="WhitePaper_Atherton">
+
+            <input type="hidden" id="_agile_form_id" name="_agile_form_id" value="6254358228369408">
+        </div>
+        <div class="ai--form">
+            <!-- Text input-->
+            <div class="agile-group">
+                <label class="agile-label" for="agilefield-1" style="display: none;">Email</label>
+                <div class="agile-field-xlarge agile-field">
+                    <input maxlength="250" id="agilefield-1" name="email" type="email" placeholder="Email address" class="agile-height-default">
+                </div>
+                <div class="agile-custom-clear"></div>
+            </div>
+            <!--recaptcha aglignment-->
+            <!-- Button -->
+            <div class="agile-group">
+                <label class="agile-label" style="display: none">&nbsp;</label>
+                <div class="agile-field agile-button-field">
+                    <button type="submit" class="agile-button" style="
+                    background-color: #222222;
+                    border-color: #222222;" >Download Now</button>
+                    <br><span id="agile-error-msg"></span>
+                </div>
+            </div>
+        </div> <!-- Close ai--form -->
+    </fieldset>
+</form>
+<script type="text/javascript">
+    (function(a){var b=a.onload,p=true;isCaptcha=false;if(p){a.onload="function"!=typeof b?function(){try{_agile_load_form_fields()}catch(a){}}:function(){b();try{_agile_load_form_fields()}catch(a){}}};var formLen=document.forms.length;for(i=0;i<formLen;i++){if(document.forms.item(i).getAttribute("id")== "agile-form"){a.document.forms.item(i).onsubmit=function(a){a.preventDefault();try{_agile_synch_form_v4(this)}catch(b){this.submit()}}}}})(window);
+</script>

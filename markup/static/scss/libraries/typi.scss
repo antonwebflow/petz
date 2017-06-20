@@ -1,0 +1,74 @@
+// using Mappy Breakpoint
+$typi-breakpoint: mappy-bp;
+
+$typi: (
+    base: (
+        null: (16px, 1.4),
+        small: (18px),
+        large: (20px)
+    ),
+
+    body: (
+        null: (16px),
+        portrait: (.9em),
+        small: (.7em),
+        large: (.7em)
+    ),
+
+    nav-fixed__link: (
+        null: (12px, 1.3),
+        small: (0.7em, 1.2),
+        large: (0.6em, 1.2)
+
+    ),
+
+    header__search: (
+        small: (0.8em),
+        large: (0.8em)
+    ),
+
+    header__phone: (
+        small: (0.955em),
+        large: (1.005em)
+    ),
+
+    header__phone__text: (
+        small: (0.75em),
+        large: (0.65em)
+    ),
+
+    basket__text: (
+        small: (0.6em),
+        large: (0.6em)
+    ),
+
+    header__button: (
+        small: (0.8em),
+        large: (.9em, 1.2)
+    ),
+
+    slider__heading: (
+        small: (1.7em),
+        large: (1.5em)
+    ),
+
+    carousel__heading: (
+        null: (22px),
+        portrait: (1.5em),
+        small: (1.5em),
+        large: (1.5em)
+    ),
+
+    subscribe__heading: (
+        null: (22px),
+        portrait: (1.5em),
+        small: (1.5em),
+        large: (1.3em)
+
+    )
+
+);
+
+@import 'typi/scss/_typi.scss';
+
+@include typi-init;

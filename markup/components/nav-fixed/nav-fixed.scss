@@ -1,0 +1,98 @@
+
+.nav-fixed {
+
+
+
+    &__dd {
+        @extend .carousel__item__select;
+        background-position: 95%;
+        @include typi('nav-fixed__link');
+
+
+    }
+
+    @include mappy-query(phone) { display: none}
+
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    border-bottom: 1px solid $color__nav-fixed__border;
+    padding: 0 10px;
+    background-color: #FFFFFF;
+    z-index: 1000;
+    &__icon {
+        padding-right: 10px;
+        flex-shrink: 0;
+        width: 1.5em;
+        max-height: 2em;
+
+        &:hover {
+            fill: #000000;
+        }
+    }
+
+
+    &__menu {
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-grow: 1;
+        flex-wrap: wrap;
+        height: $nav-fixed__height;
+        align-items: stretch;
+
+
+        &__item {
+            display: flex;
+            align-items: center;
+
+            select {
+                padding: 2px 28px 2px 2px;
+            }
+
+
+            &_icon {
+                display: flex;
+                text-transform: uppercase;
+                align-items: center;
+                font-weight: bold;
+                padding-right: 1.5em;
+
+                &:last-child {
+                    padding-right: 0;
+                }
+            }
+
+        }
+
+        &__item__link {
+            color: $color__link;
+            flex-shrink: 0;
+            @include typi('nav-fixed__link');
+
+            &:hover {
+                color: $color__link_hover;
+            }
+        }
+    }
+
+
+    &__left {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-grow: 1;
+        padding-right: 10%;
+
+    }
+
+    &__right {
+        display: flex;
+        flex-direction: row;
+        flex-basis: 33.33%;
+        justify-content: flex-start;
+    }
+
+}

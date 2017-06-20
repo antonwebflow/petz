@@ -1,0 +1,261 @@
+<div class="popup" data-popup="register">
+    <div class="popup__inner">
+
+        <form>
+
+            <h1 class="popup__heading">
+                Регистрация
+            </h1>
+
+            <label for="first-name">Имя</label>
+            <input type="text" id="first-name" placeholder="">
+
+            <label for="email">Электронная почта:</label>
+            <input type="email" id="email" placeholder="">
+
+            <label for="tel">Телефон:</label>
+            <input type="tel" id="tel" placeholder="">
+
+            <label for="email">Пароль:</label>
+            <input type="password" id="password" placeholder="">
+
+            <label for="email">Повторите пароль:</label>
+            <input type="password" id="confirm_password" required placeholder="">
+
+            <button class="popup__button" type="submit">Зарегистрироваться</button>
+
+            <a href="" class="popup__link" data-popup-close="register" data-popup-open="login">Уже зарегистрированы? Войти</a>
+
+        </form>
+        <a class="popup-close" data-popup-close="register" href="#">✕</a>
+    </div>
+</div>
+
+<div class="popup" data-popup="city">
+    <div class="popup__inner_city">
+
+        <div class="popup__search">
+            <form>
+                <h1 class="popup__heading">
+                    В каком вы городе?
+                </h1>
+                <input type="search" maxlength="50" placeholder="Название города" value="">
+            </form>
+            <div class="popup__city__row">
+
+                <div class="popup__city__col">
+                    <ul class="popup__list">
+                        <li>А
+                            <ul>
+                                <li>Астрахань</li>
+
+                            </ul>
+                        </li>
+
+                        <li>Б
+                            <ul>
+                                <li>Барнаул</li>
+                                <li>Белогород</li>
+                                <li>Брянск</li>
+                            </ul>
+                        </li>
+
+                        <li>В
+                            <ul>
+                                <li>Владивосток</li>
+                                <li>Волгоград</li>
+                                <li>Воронеж</li>
+                            </ul>
+                        </li>
+                        <li>Е
+                            <ul>
+                                <li>Екатеринбург</li>
+                            </ul>
+                        </li>
+                        <li>Е
+                            <ul>
+                                <li>Иваново</li>
+                                <li>Ижевск</li>
+                                <li>Иркутск</li>
+                                <li>Иваново</li>
+                                <li>Ижевск</li>
+                            </ul>
+                        </li>
+
+
+                    </ul>
+                </div>
+                <div class="popup__city__col">
+                    <ul class="popup__list">
+                        <li>К
+                            <ul>
+                                <li>Казань</li>
+                                <li>Калининград</li>
+                                <li>Кемерово</li>
+                                <li>Краснодар</li>
+                                <li>Красноярск</li>
+                                <li>Курск</li>
+
+                            </ul>
+                        </li>
+
+                        <li>Л
+                            <ul>
+                                <li>Липецк</li>
+                            </ul>
+                        </li>
+
+                        <li>М
+                            <ul>
+                                <li>Магнитогорск</li>
+                                <li>Махачкала</li>
+                                <li>Москва</li>
+                            </ul>
+                        </li>
+
+                        <li>Н
+                            <ul>
+                                <li>Набережные Челны</li>
+                                <li>Нижний Новгород</li>
+                                <li>Новокузнецк</li>
+                                <li>Новосибирск</li>
+                            </ul>
+                        </li>
+
+
+                    </ul>
+                </div>
+                <div class="popup__city__col">
+                    <ul class="popup__list">
+                        <li>О
+                            <ul>
+                                <li>Оренбург</li>
+
+                            </ul>
+                        </li>
+
+                        <li>П
+                            <ul>
+                                <li>Пенза</li>
+                                <li>Пермь</li>
+                            </ul>
+                        </li>
+
+                        <li>Р
+                            <ul>
+                                <li>Рязань</li>
+                            </ul>
+                        </li>
+
+                        <li>Т
+                            <ul>
+                                <li>Тверь</li>
+                                <li>Тольятти</li>
+                                <li>Томск</li>
+                                <li>Тула</li>
+                                <li>Тюмень</li>
+                            </ul>
+                        </li>
+
+                        <li>Ч
+                            <ul>
+                                <li>Чебоксары</li>
+                                <li>Челябинск</li>
+                            </ul>
+                        </li>
+
+                        <li>Т
+                            <ul>
+                                <li>Ярославль</li>
+                            </ul>
+                        </li>
+
+
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+        <a class="popup-close" data-popup-close="city" href="#">✕</a>
+    </div>
+</div>
+
+
+<div class="popup" data-popup="call">
+    <div class="popup__inner">
+
+        <form>
+
+            <h1 class="popup__heading">
+                Заказать обратный звонок
+            </h1>
+            <label for="tel">Телефон:</label>
+            <input type="tel" id="tel" >
+
+            <label for="first-name">Имя <span class="popup__grey-text">(необязательно)</span></label>
+            <input type="text" id="first-name" placeholder="">
+
+            <label for="first-name">Удобное время звонка <span class="popup__grey-text">(необязательно)</span></label>
+            <input type="text" id="first-name" placeholder="">
+
+            <label for="email">Электронная почта:</label>
+            <input type="email" id="email" placeholder="">
+
+
+            <button class="popup__button" type="submit">Заказать обратный звонок</button>
+
+
+        </form>
+        <a class="popup-close" data-popup-close="call" href="#">✕</a>
+    </div>
+</div>
+
+<div class="popup" data-popup="forget">
+    <div class="popup__inner">
+
+        <form>
+
+            <h1 class="popup__heading">
+                Забыли пароль?
+            </h1>
+
+            <p>
+                После нажатия кнопки «Восстановить» новый пароль будет выслан на введённый адрес электронной почты в том случае, если введённый адрес совпадает с указанным при регистрации.
+
+            </p>
+
+            <label for="email">Электронная почта:</label>
+            <input type="email" id="email" placeholder="">
+
+
+            <button class="popup__button" type="submit">Восстановить</button>
+
+
+        </form>
+        <a class="popup-close" data-popup-close="forget" href="#">✕</a>
+    </div>
+</div>
+<div class="popup" data-popup="login">
+    <div class="popup__inner">
+
+        <form>
+
+            <h1 class="popup__heading">
+                Вход в личный кабинет
+            </h1>
+
+            <label for="email">Электронная почта:</label>
+            <input type="email" id="email" placeholder="">
+
+            <label for="email">Пароль:</label>
+            <input type="password" id="password" placeholder="">
+            <a href="" class="popup__link_pass" data-popup-close="login" data-popup-open="forget">Напомнить пароль</a>
+
+            <button class="popup__button" type="submit">Войти</button>
+
+
+        </form>
+        <a class="popup-close" data-popup-close="login" href="#">✕</a>
+    </div>
+</div>
