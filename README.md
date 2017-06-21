@@ -2,39 +2,9 @@
 English description | <a href="README_RU.md">Описание на русском</a>
 </p>
 
-# ![Tars](https://raw.githubusercontent.com/artem-malko/artwork/master/tars/logo.png)
+Ecommerce homepage.
 
-[![Downloads][downloads-image]][npm-url] [![Mac/Linux Build Status](https://img.shields.io/travis/tars/tars/master.svg?label=Mac%20OSX%20%26%20Linux&style=flat-square)](https://travis-ci.org/tars/tars) [![Windows Build status](https://img.shields.io/appveyor/ci/artem-malko/tars/master.svg?label=Windows&style=flat-square)](https://ci.appveyor.com/project/artem-malko/tars/branch/master) [![Gitter](https://img.shields.io/badge/gitter-join%20chat%20%E2%86%92-brightgreen.svg?style=flat-square)](https://gitter.im/tars/tars?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
-
-TARS is a builder for modern frontend of any complexity, which is based on [Gulp.js](http://gulpjs.com/). It facilitates and accelerates process of web-development. TARS will be suitable for teams and individual developers. It solves the most routine cases associated with web-development and brings you more pleasure from work.
-
-TARS is a framework for gulp, including a set of gulp-tasks. It allows for easy expansion (creating new tasks) and customization (modification of existing tasks),  provides comfortable architecture for tasks and watchers storage in the project. 
-
-To bypass dependencies installation for every TARS project, [TARS-CLI](https://github.com/tars/tars-cli) was created. As such, TARS is not a npm-package by itself. This decision was made so that everyone could comfortably customize the builder for themselves. TARS-CLI is just a simple builder interface, which includes all dependencies for TARS.
-
-**It is strongly recommended to use TARS-CLI for development.**
-
-You can install TARS-CLI via NPM. More info in [project's repository](https://github.com/tars/tars-cli).
-
-**Attention! All docs from branch "master" are written for the last version of TARS. If you have another version of TARS, please, open appropriate release and take docs from there. Besides, you have all docs, which are 100% compatible with your project in the root folder of your project!**
-
-## Basic features
-
-Listed below are just a little part of the features. In fact builder has much more.
-
-* [Jade](http://jade-lang.com/), [Pug](https://pugjs.org/api/getting-started.html) or [Handlebars](http://handlebarsjs.com/) as html templater. You can also use a regular html. Read more [in docs](/docs/en/html-processing.md).
-* [Webpack](https://webpack.github.io) (with [Hot Module Replacing](https://webpack.github.io/docs/hot-module-replacement.html)) or simple JavaScript code concatenation into one bundle.
-* Using json (js-object actually, which can be described in json) to transfer data in templates (optional, but it is a very cool thing that will let you get rid of copypaste). Read more [in docs](/docs/en/html-processing.md#%D0%A0%D0%B0%D0%B1%D0%BE%D1%82%D0%B0-%D1%81-%D0%BC%D0%BE%D0%B4%D1%83%D0%BB%D1%8F%D0%BC%D0%B8-%D0%B8-%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D0%BC%D0%B8-%D0%B2-handlebars).
-* [TARS-CLI](https://github.com/tars/tars-cli) and **auto update of your project**.
-* You can use ES6 (and some experimental features from ES7) right now. [More info](/docs/en/js-processing.md).
-* [SCSS (SASS)](http://sass-lang.com/), [LESS](http://www.lesscss.org/) or [Stylus](http://learnboost.github.io/stylus/) as a preprocessor for css. Also it includes a small set of mixins. Sourcemaps are included. You can use .scss and .sass extension then scss is selected as preprocessor. You can use .scss and .sass files together. Read more [in docs](/docs/en/css-processing.md). [PostCSS](https://github.com/postcss/postcss) with [autoprefixer](https://github.com/postcss/autoprefixer) is supported by default and it is really easy [to use additional plugins for PostCSS](/docs/en/options.md#postcss).
-* No external libraries or plugins (except [html5shiv](https://ru.wikipedia.org/wiki/Html5_Shiv)). Yes, this is a feature because you can choose which library to use. Sourcemaps for JavaScript are included.
-* [Chokidar](https://github.com/paulmillr/chokidar) module is used to watch files
-* Optional markup sharing from your local computer to the world. And of course it has livereload in browser (and not just locally) + GUI control panel for devices, to which markup is shared.
-* [You can easily add new tasks and watchers](/docs/en/tasks-and-watchers.md). There are several examples of how to create and use a new task or watcher inside the TARS. Thereby, it is really easy to add any task from your builder to TARS or integrate TARS into your project.
-* Smart work with images. First of all with vector (svg). There will be no more hell with markup for screens with high pixel density. TARS supports two workflows of working with SVG: [SVG-sprites](docs/en/svg-processing.md#svg-sprites) and [SVG-symbols](docs/en/svg-processing.md#svg-symbols).
-* Several modes of assembly (common, with minified files, with hash in the title of css and js files for deployment).
-* Creating archive with a complete build.
+You can run this project using tars-cli.
 
 ## Documentation
 
@@ -148,14 +118,3 @@ It is important! All examples in documentation use the default settings.
 * [Upgrade guide](/docs/en/update-guide.md)
 * [FAQ](/docs/en/faq.md)
 
-
-## Last changes
-
-All recent changes are available here: [changelog](/docs/en/changelog.md).
-
-If you have a question you can write in [gitter](https://gitter.im/tars/tars?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge) or mail [tars.builder@gmail.com](mailto:tars.builder@gmail.com)
-
-Bugs and feature-request here: [issues](https://github.com/tars/tars/issues/new).
-
-[downloads-image]: http://img.shields.io/npm/dm/tars-cli.svg?style=flat-square
-[npm-url]: https://npmjs.org/package/tars-cli
