@@ -4,5 +4,4 @@ English description | <a href="README_RU.md">Описание на русско�
 
 Ecommerce homepage.
 
-You can run this project using tars-cli.
-[TARS-CLI](https://github.com/tars/tars-cli)
+You can run this project using [TARS-CLI](https://github.com/tars/tars-cli)
