@@ -380,11 +380,16 @@ $font_0: Ionicons;
             &__link {
                 color: $color__link;
                 @include typi('header__phone');
+
             }
             &__text {
                 color: $color__link;
                 @include typi('header__phone__text');
                 display: inline-block;
+
+                @include mappy-query(tablet) {
+                    margin-bottom: 1em;
+                }
 
             }
         }

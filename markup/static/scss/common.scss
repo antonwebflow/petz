@@ -32,7 +32,7 @@ a {
     margin: 0 auto;
     max-width: $container-width;
     @include mappy-query(tablet) {
-        max-width: none;
+        max-width: 940px;
     }
     @include mappy-query(phone) {
         padding: 0 .99em;
