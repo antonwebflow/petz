@@ -6,10 +6,6 @@ English description | <a href="README_RU.md">Описание на русско�
 
 # File structure
 
-**File structure is generated automatically. You do not need to create anything yourself.**
-
-Builder has the following file structure:
-
 ```
 ├── gulpfile.js             # gulpfile of builder
 ├── tars.json               # System file with info about builder
